@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#05070f;
+    color:#fff;
+    min-height:100vh;
+    overflow-x:hidden;
+}
+
+/* Background Glow */
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    background:
+    radial-gradient(circle at top left,#1d4fff55,transparent 35%),
+    radial-gradient(circle at bottom right,#005eff33,transparent 40%);
+    z-index:-2;
+}
+
+header{
+    height:80px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 8%;
+    border-bottom:1px solid rgba(255,255,255,.1);
+    backdrop-filter:blur(15px);
+}
+
+.logo{
+    font-size:30px;
+    font-weight:800;
+    color:#fff;
+}
+
+.logo::first-letter{
+    color:#2d7cff;
+}
+
+.back{
+    text-decoration:none;
+    color:white;
+    background:#1565ff;
+    padding:12px 22px;
+    border-radius:10px;
+    transition:.3s;
+}
+
+.back:hover{
+    transform:translateY(-3px);
+    box-shadow:0 0 20px #1565ff;
+}
+
+.info{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    padding:50px 20px;
+}
+
+.info h1{
+    font-size:50px;
+    margin-bottom:35px;
+    color:#4fa3ff;
+    text-shadow:0 0 15px rgba(79,163,255,.6);
+}
+
+/* Glass Card */
+
+.card{
+    width:90%;
+    max-width:700px;
+    background:rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.15);
+    border-radius:20px;
+    backdrop-filter:blur(18px);
+    padding:30px;
+    box-shadow:0 0 40px rgba(0,120,255,.25);
+}
+
+.row{
+    display:flex;
+    align-items:center;
+    gap:20px;
+    padding:20px 0;
+    border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.row:last-child{
+    border-bottom:none;
+}
+
+.row i{
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    background:#1565ff;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:24px;
+    box-shadow:0 0 20px rgba(21,101,255,.5);
+}
+
+.row h3{
+    font-size:20px;
+    margin-bottom:5px;
+}
+
+.row p{
+    color:#ddd;
+    font-size:17px;
+}
+
+footer{
+    text-align:center;
+    padding:30px;
+    color:#888;
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+.info h1{
+    font-size:34px;
+}
+
+.card{
+    padding:20px;
+}
+
+.row{
+    gap:15px;
+}
+
+.row i{
+    width:50px;
+    height:50px;
+    font-size:20px;
+}
+
+.row h3{
+    font-size:18px;
+}
+
+.row p{
+    font-size:15px;
+}
+
+.back{
+    padding:10px 16px;
+    font-size:14px;
+}
+
+.logo{
+    font-size:24px;
+}
+
+}
